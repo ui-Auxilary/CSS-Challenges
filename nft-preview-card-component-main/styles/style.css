@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-size: 15px;
+  font-family: "Outfit", sans-serif;
+  color: hsl(215, 51%, 70%);
+}
+
+h3 {
+  margin-top: 10px;
+  color: #fff;
+  line-height: 2;
+}
+
+p {
+  font-weight: lighter;
+  line-height: 1.5;
+  margin: 7px 0;
+}
+
+img {
+  margin-right: 7px;
+}
+
+span {
+  font-size: 0.9em;
+}
+.container {
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 10px;
+  height: auto;
+  width: 18rem;
+  text-align: left;
+  box-shadow: 0 20px 80px rgb(0 0 0/0.4);
+}
+
+.card-wrapper {
+  padding: 20px;
+  line-height: 2.5;
+}
+
+.overlay-box:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.overlay-box:hover > img {
+  animation-name: transition;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.overlay-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  z-index: 5;
+}
+
+.overlay-box > img {
+  width: 100%;
+  border-radius: 10px;
+  margin-right: 0px;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+}
+
+.overlay > img {
+  margin: 0;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+
+.overlay-box:hover img {
+  opacity: 1;
+}
+
+@keyframes transition {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.span-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.span-box > span {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  border: solid 0.5px hsl(215, 32%, 27%);
+  background-color: hsl(215, 32%, 27%);
+  margin: 10px 0;
+}
+
+.footer > span {
+  display: flex;
+  align-items: center;
+}
+
+.footer > span > img {
+  width: 1.5em;
+  border: solid 2px #fff;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 20em;
+  }
+}
