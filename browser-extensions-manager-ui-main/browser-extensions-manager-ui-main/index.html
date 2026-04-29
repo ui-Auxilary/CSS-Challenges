@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="header">
+      <div class="header__inner">
+        <a href="#" class="header__brand">
+          <img src="./assets/images/logo.svg" alt="" aria-hidden="true" class="header__logo-icon">
+          <span class="header__brand-name">Extensions</span>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+          <img src="./assets/images/icon-moon.svg" alt="" class="theme-toggle__icon theme-toggle__icon--moon">
+          <img src="./assets/images/icon-sun.svg" alt="" class="theme-toggle__icon theme-toggle__icon--sun">
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="list-header">
+        <h1 class="list-title">Extensions List</h1>
+        <div class="filters" role="group" aria-label="Filter extensions">
+          <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="inactive">Inactive</button>
+        </div>
+      </div>
+
+      <ul class="extensions-grid" id="extensionsGrid">
+        <!-- Cards rendered by JS -->
+      </ul>
+    </main>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Christian Lam</a>.
+    </footer>
+
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
